@@ -1,0 +1,486 @@
+html,
+body {
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 100;
+}
+
+a {
+	text-decoration: none;
+}
+
+ol,
+ul {
+	margin: 0;
+}
+
+#page {
+	position: relative;
+	height: 100%;
+}
+
+#masthead {
+	position: relative;
+	width: 45%;
+	background: #444;
+	height: 100%;
+	float: left;
+	/*
+	background: url(background.jpg)fixed center center no-repeat;
+	background-size: cover;
+*/
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+.home #masthead,
+.home #content {
+	width: 50%;
+}
+
+.home #masthead {
+	background-color: #fff;
+}
+
+.site-branding {
+	text-align: center;
+	padding-top: 150px;
+	position: relative;
+	left: 0;
+	transition: left cubic-bezier(0.74, 0.29, 0, 1.44) 1s;
+}
+
+.open .site-branding {
+	left: 100%;
+}
+
+.site-title {
+	font-size: 3em;
+}
+
+.site-title a {
+	color: #eee;
+	text-decoration: none;
+	text-shadow: 1px -2px 2px #222222;
+	text-transform: uppercase;
+	padding: 20px;
+	/*	font-weight: 100;*/
+}
+
+.home .site-title a {
+	color: #333;
+}
+
+.site-description {
+	font-size: .9em;
+	color: #999;
+}
+
+#site-navigation {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: -100%;
+	top: 0;
+	padding-top: 100px;
+	background: #393939;
+	transition: left cubic-bezier(0.8, -0.13, 0, 1.69) 1s;
+}
+
+.open #site-navigation {
+	left: 0;
+}
+
+.main-navigation ul {
+	display: block;
+}
+
+.menu .menu-item,
+.menu li {
+	display: inline-block;
+	width: 100%;
+	border-bottom: 1px solid #363636;
+}
+
+.menu {
+	text-align: center;
+}
+
+.menu-item a,
+.menu li a {
+	font-size: 2em;
+	color: #fff;
+	padding: 20px;
+}
+
+.menu li a:hover {
+	color: #00BCD4;
+}
+
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a {
+	color: #00BCD4;
+}
+
+a.nav-open {
+	position: absolute;
+	padding: 20px;
+	top: 0;
+	color: black;
+}
+
+#content {
+	position: relative;
+	overflow: hidden;
+	overflow-y: auto;
+	width: 55%;
+	float: right;
+	height: 100%;
+	background-color: #ffffff;
+}
+
+.home #content,
+.archive #content {
+	background-color: #f3f3f3;
+}
+
+@media screen and (max-width: 768px) {
+	#content,
+	#masthead,
+	.home #content,
+	.home #masthead {
+		width: 100%;
+	}
+	#content,
+	.home #content {
+		height: auto;
+	}
+}
+
+.site-main {
+	padding: 15px 50px;
+}
+
+.entry-header {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 100;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #eee;
+}
+
+.single .entry-header {
+	text-align: left;
+}
+
+.page-title {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 100;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #eee;
+}
+
+
+/* Aside */
+
+aside#secondary {
+	position: absolute;
+	right: -150%;
+	top: 0;
+	background-color: #FFFFFF;
+	width: 60%;
+	padding: 30px 50px;
+	overflow: auto;
+	/*	box-shadow: -2px 3px 5px #eee;*/
+	color: black;
+	height: 100%;
+	-webkit-transition: right cubic-bezier(0.8, -0.13, 0, 1.69) 1s;
+	-o-transition: right cubic-bezier(0.8, -0.13, 0, 1.69) 1s;
+	transition: right cubic-bezier(1, -1.21, 0, 1.35) 1s;
+}
+
+.open aside#secondary {
+	right: 0;
+}
+
+#secondary ul {
+	padding: 0;
+}
+
+input.search-submit {
+	background-color: #fff;
+	box-shadow: none;
+	padding: 10px;
+}
+
+
+/* Widget */
+
+h2.widget-title {
+	padding: 20px;
+	border-bottom: 1px solid #eee;
+}
+
+
+/* button */
+
+#comments .submit {
+	padding: 20px;
+	background: none;
+	box-shadow: none;
+}
+
+
+/* Comment */
+
+div#comments {
+	background-color: #FAFAFA;
+	padding: 20px 40px;
+	margin: 0 -50px;
+	margin-top: 75px;
+}
+
+footer#colophon {
+	display: none;
+}
+
+
+/* lifterlms custom style */
+
+.llms-course-list {
+	padding: 15px;
+}
+
+.llms-course-list .courses li {
+	width: 300px;
+	margin-bottom: 80px;
+}
+
+@media screen and (min-width: 768px) {
+	.llms-course-list .courses li {
+		width: 450px;
+	}
+}
+
+.llms-course-list .llms-course-link,
+.llms-course-list .llms-membership-link {
+	background: #fff;
+	padding: 0;
+	padding-bottom: 10px;
+	-webkit-box-shadow: 0px 2px 5px #eee;
+	box-shadow: 0px 0px 2px #ddd;
+}
+
+.llms-course-list .courses li .llms-price {
+	text-align: center;
+	color: steelblue;
+	font-weight: 100;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	padding: 15px;
+}
+
+.llms-course-list .llms-course-link:hover {
+	background: #fff;
+}
+
+.llms-course-list .courses li .llms-title {
+	padding: 0 15px;
+	text-align: center;
+	color: #7D7D7D;
+	font-size: 1.2em;
+	font-weight: 100;
+	text-transform: uppercase;
+}
+
+.llms-lesson-preview .llms-lesson-excerpt {
+	color: #929292;
+	font-size: .8em;
+}
+
+.llms-lesson-preview .llms-lesson-title {
+	font-size: 1.3em;
+}
+
+.llms-course-list .llms-course-footer {
+	border: none;
+	background: none;
+	padding: 0;
+	margin: 0;
+}
+
+.llms-button {
+	background: none;
+	color: #f44336;
+}
+
+.llms-purchase-link-wrapper .llms-purchase-button.llms-button {
+	padding: 20px;
+	border: none;
+	box-shadow: none;
+	background: #F44336;
+	font-size: 1.2em;
+}
+
+.llms-my-courses ul.listing-courses li.course-item {
+	padding: 20px;
+	border: 1px solid #eee;
+	margin: 40px 0;
+	/* background-color: #FBFBFB; */
+}
+
+.hentry .course-link .button.llms-button {
+	border: 1px solid #eee;
+	color: #333;
+}
+
+.course-link {}
+
+a.llms-lesson-link {
+	font-weight: normal;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	padding: 20px 0;
+	border-left: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	padding: 20px 0;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
+.course .info hgroup {
+	float: left;
+}
+
+.llms-course-list .llms-progress {
+	padding-right: 15px;
+}
+
+.llms-progress .llms-progress-bar {
+	left: 15px;
+	right: 4em;
+}
+
+
+/* Login Register */
+
+.llms-person-login,
+.llms-new-person-form-wrapper {
+	width: 50%;
+	float: left;
+	padding: 30px;
+}
+
+
+/* Humberger Menu */
+
+.hamburger {
+	position: absolute;
+	top: 5px;
+	left: 0;
+	padding: 15px 15px;
+	display: inline-block;
+	cursor: pointer;
+	transition-property: opacity, -webkit-filter;
+	transition-property: opacity, filter;
+	transition-property: opacity, filter, -webkit-filter;
+	transition-duration: 0.15s;
+	transition-timing-function: linear;
+	font: inherit;
+	color: inherit;
+	text-transform: none;
+	background-color: transparent;
+	border: 0;
+	margin: 0;
+	overflow: visible;
+}
+
+.hamburger:hover {
+	opacity: 0.7;
+}
+
+.hamburger-box {
+	width: 40px;
+	height: 24px;
+	display: inline-block;
+	position: relative;
+}
+
+.hamburger-inner {
+	display: block;
+	top: 50%;
+	margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+	width: 40px;
+	height: 4px;
+	background-color: #000;
+	border-radius: 4px;
+	position: absolute;
+	transition-property: -webkit-transform;
+	transition-property: transform;
+	transition-property: transform, -webkit-transform;
+	transition-duration: 0.15s;
+	transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+	content: "";
+	display: block;
+}
+
+.hamburger-inner::before {
+	top: -10px;
+}
+
+.hamburger-inner::after {
+	bottom: -10px;
+}
+
+
+/*
+ * Arrow Alt
+ */
+
+.hamburger--arrowalt .hamburger-inner::before {
+	transition: top 0.1s 0.15s ease, -webkit-transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: top 0.1s 0.15s ease, transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: top 0.1s 0.15s ease, transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hamburger--arrowalt .hamburger-inner::after {
+	transition: bottom 0.1s 0.15s ease, -webkit-transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: bottom 0.1s 0.15s ease, transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: bottom 0.1s 0.15s ease, transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hamburger--arrowalt.is-active .hamburger-inner::before {
+	top: 0;
+	-webkit-transform: translate3d(-8px, -10px, 0) rotate(-45deg) scale(0.7, 1);
+	transform: translate3d(-8px, -10px, 0) rotate(-45deg) scale(0.7, 1);
+	transition: top 0.1s ease, -webkit-transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+	transition: top 0.1s ease, transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+	transition: top 0.1s ease, transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22), -webkit-transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+.hamburger--arrowalt.is-active .hamburger-inner::after {
+	bottom: 0;
+	-webkit-transform: translate3d(-8px, 10px, 0) rotate(45deg) scale(0.7, 1);
+	transform: translate3d(-8px, 10px, 0) rotate(45deg) scale(0.7, 1);
+	transition: bottom 0.1s ease, -webkit-transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+	transition: bottom 0.1s ease, transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+	transition: bottom 0.1s ease, transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22), -webkit-transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
