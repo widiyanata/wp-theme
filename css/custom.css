@@ -9,6 +9,15 @@ a {
 	text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-transform: uppercase;
+}
+
 ol,
 ul {
 	margin: 0;
@@ -63,8 +72,6 @@ ul {
 	text-decoration: none;
 	text-shadow: 1px -2px 2px #222222;
 	text-transform: uppercase;
-	padding: 20px;
-	/*	font-weight: 100;*/
 }
 
 .home .site-title a {
@@ -137,6 +144,7 @@ a.nav-open {
 	float: right;
 	height: 100%;
 	background-color: #ffffff;
+	padding: 15px 50px;
 }
 
 .home #content,
@@ -144,21 +152,8 @@ a.nav-open {
 	background-color: #f3f3f3;
 }
 
-@media screen and (max-width: 768px) {
-	#content,
-	#masthead,
-	.home #content,
-	.home #masthead {
-		width: 100%;
-	}
-	#content,
-	.home #content {
-		height: auto;
-	}
-}
-
 .site-main {
-	padding: 15px 50px;
+/*	padding: 15px 50px;*/
 }
 
 .entry-header {
@@ -257,9 +252,30 @@ footer#colophon {
 	margin-bottom: 80px;
 }
 
+
+/*
+		Media Query
+*/
+
 @media screen and (min-width: 768px) {
 	.llms-course-list .courses li {
 		width: 450px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#content,
+	#masthead,
+	.home #content,
+	.home #masthead {
+		width: 100%;
+	}
+	#content,
+	.home #content {
+		height: auto;
+	}
+	.site-title {
+		font-size: 2em;
 	}
 }
 
@@ -276,7 +292,7 @@ footer#colophon {
 	text-align: center;
 	color: steelblue;
 	font-weight: 100;
-	border-top: 1px solid #eee;
+/*	border-top: 1px solid #eee;*/
 	border-bottom: 1px solid #eee;
 	padding: 15px;
 }
@@ -299,9 +315,7 @@ footer#colophon {
 	font-size: .8em;
 }
 
-.llms-lesson-preview .llms-lesson-title {
-	font-size: 1.3em;
-}
+.llms-lesson-preview .llms-lesson-title {}
 
 .llms-course-list .llms-course-footer {
 	border: none;
@@ -368,6 +382,15 @@ a.llms-lesson-link {
 .llms-progress .llms-progress-bar {
 	left: 15px;
 	right: 4em;
+}
+
+.llms-h3.llms-section-title {
+	font-size: 1.5em;
+	text-transform: uppercase;
+	padding: 20px 0;
+	border-top: 1px solid #f5f5f5;
+	border-bottom: 1px solid #f5f5f5;
+	text-align: left;
 }
 
 
